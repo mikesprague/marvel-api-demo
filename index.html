@@ -10,11 +10,23 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/sandstone/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <style>
+      html {
+        position: relative;
+        min-height: 100%;
+      }
       body {
+        padding-top: 70px;
+        margin-bottom: 60px;
         font-family: -apple-system, BlinkMacSystemFont,
           "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
           "Fira Sans", "Droid Sans", "Helvetica Neue",
           sans-serif;
+      }
+      .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
       }
     </style>
     <!--[if lt IE 9]>
@@ -24,6 +36,58 @@
   </head>
   <body>
 
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><i class="fa fa-film"></i> OMDb API Demo</a>
+        </div>
+        <form class="navbar-form navbar-right" role="search">
+          <div class="form-group input-group">
+            <input type="text" class="form-control" placeholder="Search OMDb">
+            <span class="input-group-btn">
+              <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
+            </span>
+          </div>
+        </form>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Built With <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="https://getbootstrap.com/" rel="external">Bootstrap v3.3.7</a></li>
+                <li><a href="https://bootswatch.com/sandstone/">Bootswatch Sandstorm Theme</a></li>
+                <li><a href="http://fontawesome.io/" rel="external">Font Awesome v4.6.3</a></li>
+                <li><a href="https://jquery.com/" rel="external">jQuery v3.1.0</a></li>
+                <li><a href="http://handlebarsjs.com/" rel="external">Handlebars v4.0.5</a></li>
+                <li class="divider"></li>
+                <li><a href="https://cdnjs.com/" rel="external">CDNjs</a></li>
+                <li><a href="https://www.bootstrapcdn.com/" rel="external">BootstrapCDN</a></li>
+              </ul>
+            </li>
+            <li><a href="https://omdbapi.com/" rel="external">OMDb API Docs</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted text-center">
+          Built by <a href="https://mikesprague.me" rel="external">Mike Sprague</a>.
+          <br>
+          Source <i class="fa fa-code"></i> available on <a href="https://github.com/mikesprague/omdb-demo/" rel="external"><i class="fa fa-github"></i> GitHub</a>.</p>
+      </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
