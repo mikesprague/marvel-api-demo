@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <meta name="description" content="Barebones app for interacting with the OMDb API">
+    <meta name="description" content="Barebones app for interacting with the Marvel API">
     <meta name="author" content="Mike Sprague">
-    <title>OMDb API Demo</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/sandstone/bootstrap.min.css" rel="stylesheet">
+    <title>Marvel API Demo</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <style>
       html {
@@ -15,8 +15,9 @@
         min-height: 100%;
       }
       body {
-        padding-top: 70px;
-        margin-bottom: 60px;
+        background-color: #fff;
+        padding-top: 60px;
+        margin-bottom: 100px;
         font-family: -apple-system, BlinkMacSystemFont,
           "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
           "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -26,7 +27,7 @@
         position: absolute;
         bottom: 0;
         width: 100%;
-        height: 60px;
+        height: 100px;
       }
     </style>
     <!--[if lt IE 9]>
@@ -45,23 +46,26 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="https://mikesprague.me/omdb-demo/"><i class="fa fa-film"></i> OMDb API Demo</a>
+          <a href="https://developer.marvel.com/"><img alt="Marvel Logo" class="img-resposnive" src="assets/img/marvel-logo-127x50.png"></a>
         </div>
         <div class="navbar-form navbar-right" role="search">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search OMDb">
+            <input type="text" class="form-control" placeholder="Search Marvel">
             <span class="input-group-btn">
-              <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
+              <button type="button" class="btn btn-danger"><i class="fa fa-search"></i> Search</button>
             </span>
           </div>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
+            <li><a href="https://mikesprague.me/marvel-api-demo/" rel="external">Marvel API Demo</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Built With <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
+                <li><a href="https://developer.marvel.com/" rel="external">Marvel API</a></li>
+                <li class="divider"></li>
                 <li><a href="https://getbootstrap.com/" rel="external">Bootstrap v3.3.7</a></li>
-                <li><a href="https://bootswatch.com/sandstone/">Bootswatch Sandstorm Theme</a></li>
+                <li><a href="https://bootswatch.com/cyborg/">Bootswatch Cyborg Theme</a></li>
                 <li><a href="http://fontawesome.io/" rel="external">Font Awesome v4.6.3</a></li>
                 <li><a href="https://jquery.com/" rel="external">jQuery v3.1.0</a></li>
                 <li><a href="http://handlebarsjs.com/" rel="external">Handlebars v4.0.5</a></li>
@@ -70,7 +74,6 @@
                 <li><a href="https://www.bootstrapcdn.com/" rel="external">BootstrapCDN</a></li>
               </ul>
             </li>
-            <li><a href="https://omdbapi.com/" rel="external">OMDb API Docs</a></li>
           </ul>
         </div>
       </div>
@@ -85,7 +88,11 @@
         <p class="text-muted text-center">
           Built by <a href="https://mikesprague.me" rel="external">Mike Sprague</a>.
           <br>
-          Source <i class="fa fa-code"></i> available on <a href="https://github.com/mikesprague/omdb-demo/" rel="external"><i class="fa fa-github"></i> GitHub</a>.</p>
+          Source <i class="fa fa-code"></i> available on <a href="https://github.com/mikesprague/marvel-api-demo/" rel="external"><i class="fa fa-github"></i> GitHub</a>.
+        </p>
+        <p class="text-muted text-center">
+          <small>This site is not affiliated with <a href="https://marvel.com/" class="text-danger" rel="external">Marvel</a> in any way. All copyrights belong to their respective owners.</small>
+        </p>
       </div>
     </footer>
 
