@@ -100,8 +100,14 @@
     <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script src="assets/js/base64.js"></script>
     <script>
       var app = {
+
+        // characters https://gateway.marvel.com:80/v1/public/characters?apikey=
+        // specific character https://gateway.marvel.com:80/v1/public/characters/{characterId}/?apikey=
+        apiBaseCharactersUrl: "https://gateway.marvel.com:80/v1/public/characters",
+        apiKey: "NTk4MTdjM2VjMDkxNTMyMGIwYTJlM2FlZWY5NDRmODI=",
 
         initExternalLinks: function() {
           $( "a[rel='external']" ).click( function( e ) {
@@ -110,6 +116,8 @@
             window.open( url );
           });
         },
+
+
 
         init: function() {
           this.initExternalLinks();
